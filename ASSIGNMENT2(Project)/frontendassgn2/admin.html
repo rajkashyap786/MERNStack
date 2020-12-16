@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DASHBOARD</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="index2.css">
+
+  <style>
+    .parent_popup{
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      z-index: 5;
+     display: none;
+    }
+.popup{
+  background-color:lightgray;
+  margin-top: 50px;
+  height: auto;
+  border-radius: 10px;
+   }
+
+  </style>
+
+</head>
+<body>
+
+   <div class="parent_popup" id="parent_popup" onclick="closeupdateForm(event)">
+  <div class="col-md-6 offset-md-3 popup">
+    <h2 style="text-decoration: underline;text-align: center;">Update Product</h2>
+    
+    <form>
+      
+      <div class="form-group">
+        <input class="form-control" id="id" type="hidden" placeholder="id">
+        <div class="error" id="idError"></div>
+      </div>
+      <div class="form-group">
+        <input class="form-control" id="name" type="text" placeholder="Name"  minlength="4" maxlength="10">
+        <div class="error" id="nameError"></div>
+      </div>
+      <div class="form-group">
+        <input class="form-control" id="description" type="text" placeholder="description">
+        <div class="error" id="descriptionError"></div>
+      </div>
+      <div class="form-group">
+        <input class="form-control" id="price" type="number" placeholder="Price">
+        <div class="error" id="priceError"></div>
+      </div>     
+      <div class="form-group">
+        <input class="form-control" id="type" list="11" type="text" placeholder="Type">
+        <datalist id="11">
+          <option value="Vegetable">Vegetables</option>
+          <option value="fruits">Fruits</option>
+          <option value="flowers">Flowers</option>
+        </datalist>
+        <div class="error" id="typeError"></div>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success" type="button" onclick="validateform()">Validate</button>
+        <button class="btn btn-success" type="reset" onclick="updatedata()">Update product</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+  <!---NAVIGATION--->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">SUPERMARKET</a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="addproduct.html">Add Products</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="message" style="margin-top: 20px;margin-bottom: 20px;"></div>
+
+  <div id="message" style="margin-top: 20px;margin-bottom: 20px;"></div>
+  <div class="container"> 
+   <table class="table table-bordered">
+     <thead>
+       <tr>
+         <th>S.NO</th>
+         <th>NAME</th>
+         <th class="w-25">DESCRIPTION</th>
+         <th>PRICE</th>
+         <th>RATING</th>
+         <th>TYPE</th>
+         <th>OPERATIONS</th>
+       </tr>
+     </thead>
+     <tbody id="adminTable">
+
+     </tbody>
+   </table>
+  
+  <script src="admin.js"></script>
+  <script src="updatevalidation.js"></script>
+</body>
+</html>
