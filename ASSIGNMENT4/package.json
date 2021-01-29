@@ -1,0 +1,17 @@
+{
+  "name": "assignment4",
+  "version": "1.0.0",
+  "description": "assignment submission",
+  "main": "assignApi.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.13"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start":"nodemon assignApi.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "raj kashyap",
+  "license": "ISC"
+}
