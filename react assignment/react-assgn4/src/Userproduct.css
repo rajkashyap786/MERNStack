@@ -1,0 +1,23 @@
+.container{
+  padding-top: 20px;
+  
+  /* background-color: red; */
+  
+}
+.rightshift{
+  padding-left:15px;
+}
+.form-group{
+  margin-left:20px;
+}
+.gap{
+  padding-left:15px;
+}
+h2{
+  margin-left:25px ;
+}
+
+.notfound{
+  margin-top: 20px;
+  margin-left:45px; 
+}
